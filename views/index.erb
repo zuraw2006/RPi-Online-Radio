@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RPi Online Radio</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <nav class="navbar fixed-top">
+        <div class="container">
+            <div class="row mb">
+                <div class="col-4">
+                    <a class="btn btn-block play" href="/play"><i class="material-icons st-center">play_arrow</i></a>
+                </div>
+                <div class="col-4">
+                    <a class="btn btn-block pause" href="/pause"><i class="material-icons st-center">pause</i></a>
+                </div>
+                <div class="col-4">
+                    <a class="btn btn-block vol-up" href="/volume_up"><i class="material-icons st-center">volume_up</i></a>
+                </div>
+                <div class="col-4">
+                    <a class="btn btn-block vol-down" href="/volume_down"><i class="material-icons st-center">volume_down</i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <% playlist.each do |file| %>
+            <a class="btn select btn-block mb-0-5" href="/playselect/<%= file %>"><%= File.basename(file, File.extname(file)) %></a>
+        <% end %>
+    </div>
+
+</body>
