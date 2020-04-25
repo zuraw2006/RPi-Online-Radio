@@ -4,6 +4,7 @@ RUN set -eux; \
 	apt-get update && apt-get install -y --no-install-recommends \
 	moc \
 	moc-ffmpeg-plugin \
+	redis-server \
 	&& rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/src/app

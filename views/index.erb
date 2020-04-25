@@ -29,7 +29,7 @@
 
     <div class="container">
         <% playlist.each do |file| %>
-            <a class="btn select btn-block mb-0-5" href="/playselect/<%= file %>"><%= File.basename(file, File.extname(file)) %></a>
+            <a class="btn <% if selectedFile == file %> <%= status %><% else %>select<% end %> btn-block mb-0-5" href="/playselect/<%= file %>"><%= File.basename(file, File.extname(file)) %></a>
         <% end %>
     </div>
 

@@ -4,3 +4,4 @@ Dockerfile
 .gitignore
 LICENSE
 README.md
+dump.rdb
